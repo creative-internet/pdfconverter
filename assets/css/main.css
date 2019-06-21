@@ -1,0 +1,344 @@
+/* Pointer arrow */
+.arrow {
+  background-image: url(../images/assist_21.gif);
+  width: 285px;
+  height: 196px;
+  position: fixed;
+  left: 725px;
+  top: 172.5px;
+  z-index: 1;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 25px;
+  padding: 55px 0px 0px 139px;
+  z-index: 0;
+  display: none;
+}
+
+@media (max-width: 720px) {
+  body > main > .card {
+    width: 90% !important;
+  }
+}
+
+body > main + img.backdrop {
+  min-height: 100%;
+  min-width: 1024px;
+  
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+/*  background-size: cover;*/
+}
+
+body {
+  background-color: #7f90b1 !important;
+/*  background-image: url('../images/Backdrop.png');*/
+  background-size: cover;
+/*  background-position: center; */
+}
+
+.card-body {
+  background-color: #f5f5f5;
+}
+
+.card > .card-body img.logo {
+  padding-top: 10px;
+  max-width: 300px;
+}
+
+.card-body {
+  overflow: hidden;
+}
+
+.card-body .img-container {
+  background-color: #fff;
+  position: relative;
+  left: -20px;
+  top: -21px;
+  width: calc(100% + 50px);
+  height: 80px;
+}
+
+.card > .card-body > .action-buttons-container > h3 {
+  font-weight: 150;
+  color: #333;
+}
+
+.card > .card-body > .action-buttons-container > h3 > span {
+  font-weight: 600;
+}
+
+.card > .card-body > .action-buttons-container > .action-buttons > span {
+  display: block;
+  text-align: left;
+  margin-top: 1em;
+}
+
+.card > .card-body > .action-buttons-container > .action-buttons {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.card > .card-body > .action-buttons-container > .action-buttons > span > em {
+  font-weight: 800;
+  font-size: 0.9em;
+  font-style: normal;
+}
+
+.card > .card-body > .action-buttons-container > a {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  background-color: #53a2df;
+  background: linear-gradient(to bottom, #0687da 0%,#4e95d4 100%); /* W3C, IE10+, FF16+, Chrome26+, 
+  Opera12+, Safari7+ */
+  box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.75);
+  text-shadow: 0px 2px 0px #111;
+/*  border-color: #65cc32;*/
+  font-size: 2em;
+  padding: 12px 3em !important;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+body > .copyright-container {
+  /* z-index: 50; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #00000000 !important;
+  color: white !important;
+  text-align: right !important;
+}
+
+.fas.fa-arrow-right {
+  color: #2B478F;
+}
+
+.arrow > span {
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+  line-height: 20px;
+}
+
+/* Blurred overlay, shows when the Download button is clicked */
+div.overlay {
+  position: absolute;
+  background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s linear opacity;
+}
+
+body > main > .card {
+  border-radius: 15px;
+  transition: 0.2s linear filter;
+  filter: blur(0px);
+  z-index: 10;
+  width: 720px;
+  overflow: hidden;
+}
+
+
+/* overlay visible */
+body.overlay > div.overlay {
+  z-index: 10;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+body.overlay > main > .card {
+  filter: blur(10px);
+  z-index: 0;
+}
+
+body.overlay > .arrow {
+  display: block;
+  z-index: 20;
+}
+
+
+.cancel-confirmation-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 50;
+  background-color: #eee !important;
+}
+
+
+body:not(.cancel-confirmation) .cancel-confirmation-card {
+  display: none;
+}
+
+body.overlay.cancel-confirmation .arrow {
+  display: none;
+}
+
+body.overlay.cancel-confirmation .cancel-confirmation-card {
+  display: block;
+}
+
+.cancel-confirmation-card > .card-body > h5 {
+  font-size: 1em;
+  font-weight: 500;
+  color: #0F4ABD;
+  padding: 20px;
+  width: 70%;
+  display: inline-block;
+}
+
+.cancel-confirmation-card > .card-body > img {
+  display: inline-block;
+  width: 90px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.cancel-confirmation-card > .card-body > .action-buttons {
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.cancel-confirmation-card > .card-body > .action-buttons > input {
+  width: 80px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.cancel-confirmation-card > .card-body > .action-buttons > input:focus {
+  outline: 0;
+}
+
+/* overlay not visible */
+body:not(.overlay) > div.overlay {
+  z-index: 0;
+}
+
+.card {
+  position: absolute !important;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card-body > h5 {
+  font-weight: 600;
+  font-size: 1.15em;
+}
+
+.card-body > h5 + p {
+  font-size: 0.9em;
+}
+
+.card .action-buttons {
+  position: relative;
+}
+
+.card .action-buttons > img {
+  position: relative;
+/*  left: -200px;*/
+  top: -35px;
+}
+
+.card .action-buttons > .cancelBtn {
+  position: relative;
+  top: -35px;
+  margin-left: 15px;
+}
+
+.downloadButton {
+  background-image: url(../images/button.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 259px;
+  height: 110px;
+  overflow: hidden; 
+}
+
+.downloadButton:hover {
+  background-position: 0 -110px;
+}
+
+.cancelBtn {
+  background-image: url(../images/cancelBtn.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 105px;
+  height: 22px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: gray;
+  font-weight: bold;
+  background-color: #ffffff00;
+  border-radius: 3px;
+  padding: 0px 5px; 
+}
+
+.closeBtn:hover {
+  background-color: #ccc;
+  text-decoration: none;
+  color: gray;
+}
+
+.card-footer {
+  background-color: #fff !important;
+  border-top: 0 !important;
+  font-size: 0.8em;
+}
+
+.card-footer a{
+  color: white;
+/*  text-decoration: underline;*/
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.card-footer > span {
+  font-size: 0.8em;
+  display: inline-block;
+/*  padding: 0 5px;*/
+/*  width: 40%;*/
+}
+
+.modal:not(.hide) {
+  display: block;
+}
+
+.modal-backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1071;
+    background-color: #000;
+    transition: opacity .15s linear;
+}
+
+.modal-backdrop.show {
+    opacity: .5;
+    display: block;
+}
+
+#confirmDialog > .modal-dialog {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
