@@ -42,12 +42,12 @@ body {
 }
 
 .card-body {
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .card > .card-body img.logo {
   padding-top: 10px;
-  max-width: 300px;
+  max-width: 120px;
 }
 
 .card-body {
@@ -92,12 +92,11 @@ body {
 .card > .card-body > .action-buttons-container > a {
   margin-top: 1em;
   margin-bottom: 0.5em;
-  background-color: #53a2df;
-  background: linear-gradient(to bottom, #0687da 0%,#4e95d4 100%); /* W3C, IE10+, FF16+, Chrome26+, 
-  Opera12+, Safari7+ */
-  box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.75);
-  text-shadow: 0px 2px 0px #111;
-/*  border-color: #65cc32;*/
+  background-color: #65CC33;
+  text-transform: uppercase;
+/*  box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.75);*/
+/*  text-shadow: 0px 2px 0px #111;*/
+  border-color: #65cc32;
   font-size: 2em;
   padding: 12px 3em !important;
   font-weight: 600;
@@ -109,9 +108,18 @@ body > .copyright-container {
   position: absolute;
   bottom: 0;
   right: 0;
+  left: 0;
   background-color: #00000000 !important;
   color: white !important;
-  text-align: right !important;
+  text-align: center !important;
+}
+
+@media (max-height: 650px) {
+  body > .copyright-container {
+    position: absolute;
+    top: 570px;
+    margin-bottom: 70px; 
+  }
 }
 
 .fas.fa-arrow-right {
